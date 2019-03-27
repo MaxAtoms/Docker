@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+
+  jupyter:
+    build:
+      context: ./
+    image: project-xyz-jupyter:latest
+    container_name: Project_XYZ_JupyterNotebook
+    volumes:
+      - ./notebooks:/home/jovyan
+    ports:
+      - "127.0.0.1:8888:8888"
